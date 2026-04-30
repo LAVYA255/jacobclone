@@ -10,7 +10,7 @@ const right = [
 const all = [...left, ...right];
 ---
 <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-border-soft">
-  <div class="container-js relative flex items-center h-[92px] md:h-[124px]">
+  <div class="container-js relative flex items-center h-[78px] md:h-[96px]">
     <button id="menu-toggle" class="lg:hidden p-2 -ml-2" aria-label="Open menu">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
@@ -24,13 +24,9 @@ const all = [...left, ...right];
       ))}
     </div>
 
-    <a href="/" class="absolute left-1/2 -translate-x-1/2 flex items-center" aria-label="Jakob Simon Zürich">
-      <img
-        src="/js-assets/jslogo.avif"
-        alt="Jakob Simon Zürich"
-        class="h-14 md:h-[88px] w-auto select-none"
-        draggable="false"
-      />
+    <a href="/" class="absolute left-1/2 -translate-x-1/2 flex flex-col items-center leading-none" aria-label="Jakob Simon Zürich">
+      <span class="js-wordmark">JAKOB&nbsp;SIMON</span>
+      <span class="js-zurich">ZÜRICH</span>
     </a>
 
     <div class="hidden lg:flex items-center gap-9 flex-1 justify-end">
@@ -64,6 +60,25 @@ const all = [...left, ...right];
     </nav>
   </div>
 </header>
+
+<style>
+  .js-wordmark {
+    font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(22px, 2.4vw, 30px);
+    letter-spacing: 0.02em;
+    color: #1c1d1d;
+    white-space: nowrap;
+  }
+  .js-zurich {
+    font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.42em;
+    margin-top: 4px;
+    color: #1c1d1d;
+  }
+</style>
 
 <script>
   const t = document.getElementById('menu-toggle');
