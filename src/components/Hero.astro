@@ -2,7 +2,7 @@
 ---
 <section class="relative w-full overflow-hidden bg-black hero-section">
   <video
-    class="absolute inset-0 w-full h-full object-cover"
+    class="absolute inset-0 w-full h-full object-cover hero-media"
     src="/js-assets/hero-video.mp4"
     autoplay
     muted
@@ -12,19 +12,27 @@
     poster="/js-assets/JakobSimon0042.webp"
   ></video>
   <noscript>
-    <img src="/js-assets/JakobSimon0042.webp" alt="Jakob Simon Zürich" class="absolute inset-0 w-full h-full object-cover" />
+    <img src="/js-assets/JakobSimon0042.webp" alt="Jakob Simon Zürich" class="absolute inset-0 w-full h-full object-cover hero-media" />
   </noscript>
 </section>
 
 <style>
   .hero-section {
-    height: calc(100vh - 130px);
-    min-height: 560px;
-    max-height: 880px;
+    height: calc(100vh - 124px);
+    min-height: 640px;
   }
-  @media (max-width: 768px) {
+  .hero-media {
+    object-position: center 28%;
+  }
+  @media (max-width: 1024px) {
     .hero-section {
-      height: 70vh;
+      height: calc(100vh - 78px);
+      min-height: 560px;
+    }
+  }
+  @media (max-width: 640px) {
+    .hero-section {
+      height: calc(100svh - 78px);
       min-height: 480px;
     }
   }
