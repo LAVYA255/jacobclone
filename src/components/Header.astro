@@ -65,7 +65,7 @@ const all = [...left, ...right];
   .js-wordmark {
     font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
     font-weight: 700;
-    font-size: clamp(22px, 2.4vw, 30px);
+    font-size: clamp(17px, 2.4vw, 30px);
     letter-spacing: 0.02em;
     color: #1c1d1d;
     white-space: nowrap;
@@ -73,10 +73,13 @@ const all = [...left, ...right];
   .js-zurich {
     font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
     font-weight: 500;
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 0.42em;
-    margin-top: 4px;
+    margin-top: 3px;
     color: #1c1d1d;
+  }
+  @media (min-width: 768px) {
+    .js-zurich { font-size: 11px; margin-top: 4px; }
   }
 </style>
 
