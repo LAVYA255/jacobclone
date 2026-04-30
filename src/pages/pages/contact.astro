@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Contact — Jakob Simon Zürich">
+  <section class="py-24 md:py-32">
+    <div class="container-js max-w-2xl">
+      <p class="eyebrow text-navy mb-4 text-center fade-up">Contact</p>
+      <h1 class="heading-section text-center mb-6 fade-up">Contact us</h1>
+      <p class="text-center text-[15px] leading-relaxed font-light text-black/70 mb-12 fade-up">
+        If you have any questions, concerns, or feedback, please don't hesitate to reach out via the contact form below.
+      </p>
+
+      <form class="space-y-5 fade-up">
+        <div class="grid md:grid-cols-2 gap-5">
+          <input type="text" required placeholder="Name" class="w-full border border-black/30 px-4 py-3 text-sm focus:border-navy outline-none" />
+          <input type="email" required placeholder="Email" class="w-full border border-black/30 px-4 py-3 text-sm focus:border-navy outline-none" />
+        </div>
+        <input type="tel" placeholder="Phone number" class="w-full border border-black/30 px-4 py-3 text-sm focus:border-navy outline-none" />
+        <textarea required placeholder="Message" rows="6" class="w-full border border-black/30 px-4 py-3 text-sm focus:border-navy outline-none"></textarea>
+        <div class="text-center pt-2">
+          <button type="submit" class="btn-primary">Send</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</Layout>

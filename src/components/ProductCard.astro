@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  price: string;
+  image: string;
+  hoverImage?: string;
+  href?: string;
+  variants?: { label: string; swatch: string }[];
+}
+const { title, price, image, hoverImage, href = '#', variants = [] } = Astro.props;
+---
+<a href={href} class="product-card group block">
+  <div class="relative overflow-hidden bg-[#f5f5f0] aspect-[3/4]">
+    <img src={image} alt={title} class="product-card-img absolute inset-0 w-full h-full object-cover" loading="lazy" />
+    {hoverImage && (
+      <img src={hoverImage} alt="" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500" loading="lazy" />
+    )}
+  </div>
+  <div class="pt-5 text-center">
+    <h3 class="font-serif text-xl mb-1.5 font-light">{title}</h3>
+    <p class="text-[13px] tracking-wide mb-3">{price}</p>
+    {variants.length > 0 && (
+      <div class="flex justify-center gap-2">
+        {variants.map((v) => (
+          <span class="w-3.5 h-3.5 rounded-full border border-black/20" style={`background:${v.swatch}`} title={v.label}></span>
+        ))}
+      </div>
+    )}
+  </div>
+</a>

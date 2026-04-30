@@ -1,0 +1,119 @@
+---
+const cs = [
+  { label: 'FAQ', href: '/pages/faq' },
+  { label: 'Delivery & Returns', href: '/pages/delivery-returns' },
+  { label: 'Contact', href: '/pages/contact' },
+];
+const legal = [
+  { label: 'Conditions', href: '/pages/conditions' },
+  { label: 'Imprint', href: '/pages/imprint' },
+  { label: 'Data Protection', href: '/pages/privacy' },
+  { label: 'Cookie Policy', href: '/pages/cookies' },
+];
+---
+<footer class="bg-white border-t border-border-soft pt-20 pb-10">
+  <div class="container-js grid md:grid-cols-4 gap-12 md:gap-10">
+    <div>
+      <a href="/" aria-label="Jakob Simon Zürich" class="inline-block">
+        <span class="js-monogram font-serif font-light text-[88px] leading-none text-ink select-none">JS</span>
+      </a>
+    </div>
+
+    <div>
+      <h4 class="footer-heading">Customer Service</h4>
+      <ul class="space-y-3.5 mt-5">
+        {cs.map((l) => (
+          <li><a href={l.href} class="footer-link">{l.label}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="footer-heading">Legal</h4>
+      <ul class="space-y-3.5 mt-5">
+        {legal.map((l) => (
+          <li><a href={l.href} class="footer-link">{l.label}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="footer-heading">Newsletter</h4>
+      <p class="text-[14px] mt-5 mb-5 text-black/80">Subscribe and enjoy exclusive benefits.</p>
+      <form class="flex items-center border-b border-black/70 pb-2">
+        <input
+          type="email"
+          required
+          placeholder="Enter your email"
+          class="flex-1 bg-transparent outline-none text-sm placeholder:text-black/55 py-1"
+        />
+        <button type="submit" aria-label="Subscribe" class="ml-3 p-1 hover:opacity-60 transition-opacity">
+          <svg width="18" height="14" viewBox="0 0 24 18" fill="none" stroke="currentColor" stroke-width="1.4">
+            <rect x="1" y="1" width="22" height="16" rx="1"/>
+            <path d="m1 2 11 9 11-9"/>
+          </svg>
+        </button>
+      </form>
+
+      <div class="flex gap-4 mt-7 text-black/80">
+        <a href="https://instagram.com" aria-label="Instagram" class="hover:text-black transition-colors">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+        <a href="https://pinterest.com" aria-label="Pinterest" class="hover:text-black transition-colors">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M11 8c-2 0-4 1.6-4 4 0 1.5.7 2.5 1.7 2.8.1 0 .2 0 .2-.2l.2-.7c0-.2 0-.2-.1-.4-.3-.4-.5-.9-.5-1.6 0-2 1.4-3.7 3.7-3.7 2 0 3.1 1.2 3.1 2.9 0 2.2-.9 4-2.4 4-.8 0-1.4-.6-1.2-1.5.3-1.1.8-2.2.8-3 0-.7-.4-1.3-1.2-1.3-1 0-1.7 1-1.7 2.3 0 .8.3 1.4.3 1.4l-1.2 5.1c-.4 1.5 0 3.4 0 3.5 0 .1.1.1.2 0 .1-.1 1.4-1.7 1.8-3.2l.7-2.7c.4.7 1.4 1.3 2.5 1.3 3.3 0 5.5-3 5.5-7 0-3-2.5-5-5.7-5z"/></svg>
+        </a>
+        <a href="https://tiktok.com" aria-label="TikTok" class="hover:text-black transition-colors">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3v3.2c1 .7 2.2 1.1 3.5 1.1V11c-1.3 0-2.5-.3-3.5-.9v5.7c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6c.5 0 1 .1 1.5.2v3.2c-.5-.2-1-.3-1.5-.3-1.5 0-2.7 1.2-2.7 2.8 0 1.5 1.2 2.8 2.7 2.8s2.7-1.2 2.7-2.8V3H16z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-js mt-20 flex flex-col items-center gap-6 text-center">
+    <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[12px] tracking-wider text-black/75">
+      <button class="flex items-center gap-1.5 hover:text-black">
+        <span>English</span>
+        <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <button class="flex items-center gap-1.5 hover:text-black">
+        <span class="inline-flex items-center justify-center w-4 h-4 bg-[#d52b1e] rounded-full relative overflow-hidden">
+          <span class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-[3px] bg-white"></span>
+          <span class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[3px] bg-white"></span>
+        </span>
+        <span>Switzerland (CHF&nbsp;CHF)</span>
+        <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-center gap-2.5">
+      <span class="pay-pill">Apple Pay</span>
+      <span class="pay-pill">Google Pay</span>
+      <span class="pay-pill pay-pill-color" style="background:#eb001b;color:#fff;">Mastercard</span>
+      <span class="pay-pill pay-pill-color" style="background:#003087;color:#fff;">PayPal</span>
+      <span class="pay-pill pay-pill-color" style="background:#5a31f4;color:#fff;">Shop Pay</span>
+      <span class="pay-pill pay-pill-color" style="background:#1434cb;color:#fff;">Visa</span>
+    </div>
+
+    <p class="text-[11px] tracking-wider text-black/55">© 2026 Jakob Simon Zürich copyright</p>
+    <p class="text-[11px] tracking-wider text-black/55">Powered by <span class="italic font-medium">Shopify</span></p>
+  </div>
+</footer>
+
+<style>
+  .footer-heading {
+    @apply text-[12px] tracking-[0.28em] uppercase font-medium text-navy;
+  }
+  .footer-link {
+    @apply text-[14px] text-black/85 hover:text-black hover:underline underline-offset-4 transition-colors;
+  }
+  .pay-pill {
+    @apply inline-flex items-center justify-center px-2.5 h-7 rounded-md border border-black/10 bg-white text-[10px] font-semibold tracking-wide text-black/80;
+    min-width: 44px;
+  }
+  .pay-pill.pay-pill-color {
+    border-color: transparent;
+  }
+  .js-monogram {
+    letter-spacing: -0.04em;
+  }
+</style>

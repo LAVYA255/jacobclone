@@ -1,0 +1,29 @@
+---
+---
+<div class="bg-navy text-white text-center py-2.5 text-[10.5px] tracking-[0.28em] uppercase font-medium overflow-hidden">
+  <div class="announcement-track whitespace-nowrap">
+    <span class="px-10">Free shipping within Switzerland from CHF 150</span>
+    <span class="px-10 opacity-60">·</span>
+    <span class="px-10">Handcrafted in Italy</span>
+    <span class="px-10 opacity-60">·</span>
+    <span class="px-10">Worldwide delivery available</span>
+    <span class="px-10 opacity-60">·</span>
+    <span class="px-10">Free shipping within Switzerland from CHF 150</span>
+    <span class="px-10 opacity-60">·</span>
+    <span class="px-10">Handcrafted in Italy</span>
+    <span class="px-10 opacity-60">·</span>
+    <span class="px-10">Worldwide delivery available</span>
+  </div>
+</div>
+
+<style>
+  .announcement-track {
+    display: inline-block;
+    animation: marquee 38s linear infinite;
+    will-change: transform;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+</style>

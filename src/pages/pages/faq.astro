@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqs = [
+  { q: 'Where are your products made?', a: 'Every Jakob Simon piece is handcrafted in renowned ateliers in Italy, with great attention to detail and traditional craftsmanship.' },
+  { q: 'How long does shipping take?', a: 'Within Switzerland, orders typically arrive in 2–4 business days. International orders take 5–10 business days depending on the destination.' },
+  { q: 'What is your return policy?', a: 'You may return unworn items in original condition within 14 days of receipt. Please see Delivery & Returns for details.' },
+  { q: 'Do you offer gift wrapping?', a: 'Yes — every order is delivered in our signature packaging. A handwritten gift note can be added at checkout.' },
+  { q: 'How should I care for my scarf or belt?', a: 'Silk should be dry-cleaned only. Leather should be kept dry and conditioned occasionally with a neutral cream.' },
+];
+---
+<Layout title="FAQ — Jakob Simon Zürich">
+  <section class="py-24">
+    <div class="container-js max-w-3xl">
+      <p class="eyebrow text-navy text-center mb-4 fade-up">Help</p>
+      <h1 class="heading-section text-center mb-14 fade-up">Frequently asked questions</h1>
+      <div class="divide-y divide-border-soft border-y border-border-soft fade-up">
+        {faqs.map((f, i) => (
+          <details class="group">
+            <summary class="cursor-pointer list-none flex justify-between items-center py-6 text-base font-medium">
+              <span>{f.q}</span>
+              <span class="text-2xl font-light group-open:rotate-45 transition-transform">+</span>
+            </summary>
+            <p class="pb-6 text-[15px] leading-[1.8] font-light text-black/75">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

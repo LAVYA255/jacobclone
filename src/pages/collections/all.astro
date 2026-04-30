@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+
+const products = [
+  { title: 'Bandeau "Cristiana"', price: 'CHF 99.00', image: '/js-assets/haarreif-1.webp', href: '/products/bandeau-cristiana' },
+  { title: 'Scarf "Jana" — Cream', price: 'CHF 129.00', image: '/js-assets/seidentuch-weiss-1.webp', hoverImage: '/js-assets/seidentuch-blau-1.jpg', href: '/products/scarf-jana-cream',
+    variants: [{ label: 'Cream', swatch: '#f5efe4' }, { label: 'Dark blue', swatch: '#0b1a3a' }] },
+  { title: 'Scarf "Jana" — Blue', price: 'CHF 129.00', image: '/js-assets/seidentuch-blau-weiss-1.jpg', hoverImage: '/js-assets/seidentuch-blau-1.jpg', href: '/products/scarf-jana-blue' },
+  { title: "Leather Belt 'Valentina' 30mm — Brown", price: 'CHF 149.00', image: '/js-assets/guertel-braun.webp', href: '/products/belt-valentina-brown' },
+  { title: "Leather Belt 'Valentina' 30mm — Black", price: 'CHF 149.00', image: '/js-assets/guertel-schwarz.webp', href: '/products/belt-valentina-black' },
+  { title: "Leather Belt 'Valentina' 30mm — Beige", price: 'CHF 149.00', image: '/js-assets/guertel-beige.webp', href: '/products/belt-valentina-beige' },
+  { title: 'Editorial Look I', price: 'CHF —', image: '/js-assets/JakobSimon0006.jpg', href: '/products/look-i' },
+  { title: 'Editorial Look II', price: 'CHF —', image: '/js-assets/JakobSimon0014.jpg', href: '/products/look-ii' },
+  { title: 'Editorial Look III', price: 'CHF —', image: '/js-assets/JakobSimon0042.webp', href: '/products/look-iii' },
+];
+---
+<Layout title="Products — Jakob Simon Zürich">
+  <section class="py-16 md:py-20 border-b border-border-soft">
+    <div class="container-js text-center">
+      <p class="eyebrow text-navy mb-3">Collection</p>
+      <h1 class="heading-section">All Products</h1>
+      <p class="mt-4 text-sm text-black/60">{products.length} products</p>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container-js">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-12">
+        {products.map((p) => <ProductCard {...p} />)}
+      </div>
+    </div>
+  </section>
+</Layout>

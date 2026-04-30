@@ -1,0 +1,26 @@
+---
+const looks = [
+  { image: '/js-assets/JakobSimon0687.jpg', alt: 'Editorial — silk scarf look', href: '/collections/all' },
+  { image: '/js-assets/Bildschirmfoto_2024-11-20_um_13.41.58.png', alt: 'Editorial — sun hat look', href: '/collections/all' },
+];
+---
+<section class="pb-24 md:pb-32 bg-white">
+  <div class="container-js grid md:grid-cols-2 gap-6 md:gap-8 fade-up">
+    {looks.map((l) => (
+      <a href={l.href} class="relative block group overflow-hidden">
+        <div class="relative aspect-[4/5] overflow-hidden bg-black">
+          <img
+            src={l.image}
+            alt={l.alt}
+            loading="lazy"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1400ms] group-hover:scale-[1.04]"
+          />
+          <div class="absolute inset-5 md:inset-7 border border-white/85 pointer-events-none"></div>
+          <div class="absolute inset-x-0 bottom-12 md:bottom-16 flex justify-center">
+            <span class="btn-outline-light">Shop the look</span>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

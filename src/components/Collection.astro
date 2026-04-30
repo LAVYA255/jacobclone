@@ -1,0 +1,60 @@
+---
+import ProductCard from './ProductCard.astro';
+
+const products = [
+  {
+    title: 'Bandeau "Cristiana"',
+    price: 'CHF 99.00',
+    image: '/js-assets/haarreif-1.webp',
+    href: '/products/bandeau-cristiana',
+  },
+  {
+    title: 'Scarf "Jana"',
+    price: 'CHF 129.00',
+    image: '/js-assets/seidentuch-weiss-1.webp',
+    hoverImage: '/js-assets/seidentuch-blau-1.jpg',
+    href: '/products/scarf-jana-cream',
+    variants: [
+      { label: 'Cream white', swatch: '#f5efe4' },
+      { label: 'Dark blue', swatch: '#0b1a3a' },
+    ],
+  },
+  {
+    title: 'Scarf "Jana"',
+    price: 'CHF 129.00',
+    image: '/js-assets/seidentuch-blau-weiss-1.jpg',
+    hoverImage: '/js-assets/seidentuch-blau-1.jpg',
+    href: '/products/scarf-jana-blue',
+    variants: [
+      { label: 'Dark blue', swatch: '#0b1a3a' },
+      { label: 'Cream white', swatch: '#f5efe4' },
+    ],
+  },
+  {
+    title: "Leather Belt 'Valentina' 30mm",
+    price: 'CHF 149.00',
+    image: '/js-assets/guertel-braun.webp',
+    hoverImage: '/js-assets/guertel-schwarz.webp',
+    href: '/products/leather-belt-valentina',
+    variants: [
+      { label: 'Brown', swatch: '#5b3a23' },
+      { label: 'Black', swatch: '#111111' },
+      { label: 'Beige', swatch: '#d8c8a8' },
+    ],
+  },
+];
+---
+<section class="pb-24 md:pb-32 bg-white">
+  <div class="container-js">
+    <div class="text-center mb-10 fade-up">
+      <h2 class="heading-section mb-7">Our new collection</h2>
+      <a href="/collections/all" class="btn-outline-pill">View all</a>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-12 fade-up mt-14">
+      {products.map((p) => (
+        <ProductCard {...p} />
+      ))}
+    </div>
+  </div>
+</section>

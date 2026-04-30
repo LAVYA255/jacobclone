@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-navy: #04234d;
+    --color-navy-dim: #031835;
+    --color-navy-light: #07397d;
+    --color-ink: #1c1d1d;
+    --color-border: #e8e8e1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-white text-black font-sans antialiased;
+    font-feature-settings: "kern", "liga";
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+    font-weight: 400;
+  }
+}
+
+@layer components {
+  .container-js { @apply max-w-[1400px] mx-auto px-5 md:px-10; }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-10 py-3.5 rounded-full text-[11px] tracking-[0.28em] uppercase font-semibold
+           bg-navy text-white border border-navy
+           hover:bg-navy-dim transition-colors duration-300;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-10 py-3.5 rounded-full text-[11px] tracking-[0.28em] uppercase font-semibold
+           border border-black/80 text-black bg-transparent
+           hover:bg-black hover:text-white transition-colors duration-300;
+  }
+
+  .btn-outline-pill {
+    @apply inline-flex items-center justify-center px-9 py-3 rounded-full text-[11px] tracking-[0.28em] uppercase font-semibold
+           border border-black/70 text-black bg-transparent
+           hover:bg-black hover:text-white transition-colors duration-300;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center px-10 py-3.5 rounded-full text-[11px] tracking-[0.28em] uppercase font-semibold
+           border border-white text-white bg-transparent
+           hover:bg-white hover:text-black transition-colors duration-300;
+  }
+
+  .eyebrow {
+    @apply text-[11px] tracking-[0.3em] uppercase font-medium;
+  }
+
+  .heading-display {
+    @apply font-serif font-light leading-[1.05] tracking-tight;
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+  }
+
+  .heading-section {
+    @apply font-serif font-light leading-[1.1] tracking-tight;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+  }
+
+  .nav-link {
+    @apply text-[12px] tracking-[0.2em] uppercase font-medium hover:opacity-60 transition-opacity;
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-card-img {
+  transition: transform 0.7s ease;
+}
+.product-card:hover .product-card-img {
+  transform: scale(1.04);
+}
