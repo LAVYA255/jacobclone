@@ -1,9 +1,9 @@
 ---
 ---
-<section class="py-20 md:py-32 bg-white">
+<section class="py-16 md:py-28 bg-white">
   <div class="container-js text-center mx-auto">
-    <h2 class="welcome-title mb-8 fade-up">
-      Welcome to Jakob Simon <span class="welcome-zurich">Zurich</span>
+    <h2 class="welcome-title fade-up">
+      Welcome to Jakob Simon<br />Zurich
     </h2>
     <p class="welcome-copy fade-up">
       Discover our collection and lose yourself in the quiet allure of timeless beauty and
@@ -19,32 +19,22 @@
     font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.02em;
-    line-height: 1.18;
-    font-size: clamp(1.55rem, 3.4vw, 2.4rem);
-    max-width: 18ch;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .welcome-zurich { display: inline-block; }
-  @media (max-width: 640px) {
-    .welcome-title {
-      max-width: 14ch;
-    }
-    .welcome-zurich::before {
-      content: "";
-      display: block;
-    }
+    letter-spacing: 0.04em;
+    line-height: 1.25;
+    font-size: clamp(1.45rem, 3vw, 2.25rem);
+    color: #1c1d1d;
+    margin: 0 auto 1.75rem;
   }
   .welcome-copy {
-    font-size: 15px;
+    font-size: 14.5px;
     line-height: 1.85;
-    color: rgba(0, 0, 0, 0.75);
+    color: rgba(0, 0, 0, 0.78);
     font-weight: 300;
-    max-width: 38rem;
-    margin: 0 auto 2.5rem;
+    max-width: 36rem;
+    margin: 0 auto 2.25rem;
   }
   @media (min-width: 768px) {
-    .welcome-copy { font-size: 16px; }
+    .welcome-copy { font-size: 16px; max-width: 38rem; }
+    .welcome-title { margin-bottom: 2rem; }
   }
 </style>
