@@ -1,12 +1,14 @@
 ---
 ---
 <section class="py-20 md:py-32 bg-white">
-  <div class="container-js text-center max-w-2xl mx-auto">
-    <h2 class="welcome-title mb-8 fade-up">Welcome to Jakob Simon Zurich</h2>
-    <p class="text-[15px] md:text-base leading-[1.9] text-black/75 font-light mb-10 fade-up">
-      Step into our world and discover a collection shaped by quiet sophistication and refined
-      craftsmanship. More than a label, Jakob Simon Zurich is an invitation to a lifestyle
-      defined by enduring elegance.
+  <div class="container-js text-center mx-auto">
+    <h2 class="welcome-title mb-8 fade-up">
+      Welcome to Jakob Simon <span class="welcome-zurich">Zurich</span>
+    </h2>
+    <p class="welcome-copy fade-up">
+      Discover our collection and lose yourself in the quiet allure of timeless beauty and
+      incomparable elegance. More than a label, Jakob Simon Zurich is an invitation to a
+      considered lifestyle, shaped by enduring class.
     </p>
     <a href="/collections/all" class="btn-primary fade-up">Discover now</a>
   </div>
@@ -18,7 +20,31 @@
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.02em;
-    line-height: 1.2;
-    font-size: clamp(1.5rem, 3.4vw, 2.4rem);
+    line-height: 1.18;
+    font-size: clamp(1.55rem, 3.4vw, 2.4rem);
+    max-width: 18ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .welcome-zurich { display: inline-block; }
+  @media (max-width: 640px) {
+    .welcome-title {
+      max-width: 14ch;
+    }
+    .welcome-zurich::before {
+      content: "";
+      display: block;
+    }
+  }
+  .welcome-copy {
+    font-size: 15px;
+    line-height: 1.85;
+    color: rgba(0, 0, 0, 0.75);
+    font-weight: 300;
+    max-width: 38rem;
+    margin: 0 auto 2.5rem;
+  }
+  @media (min-width: 768px) {
+    .welcome-copy { font-size: 16px; }
   }
 </style>
